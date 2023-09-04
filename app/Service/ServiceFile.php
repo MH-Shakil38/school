@@ -10,5 +10,7 @@ class ServiceFile
     const MESSAGE = 'message/';
     const CIRCULAE = 'circular/';
     const DOCUMENTS_FILE = 'documents-file/';
-    const PHOTOGALLERY = 'photo-gallery/';
+    const PHOTOGALLERY  = 'photo-gallery/';
+    const TEACHER_IMAGE  = 'teacher-image/';
+    const TEACHER_CV     = 'teacher-cv/';
 }

@@ -2,8 +2,8 @@
     <h3>অনলাইন ভর্তি</h3>
     <a href="https://ccpc.eabedon.com/" class="speach">
         <div class="speach-box">
-            <div class="spech-img">
-                <img src="{{asset('/theam1/')}}/media/logos/Ze5gz3KSmCLGdA5HijM0LDrnZ98Mb0JsQKWQFEix.jpg" alt="">
+            <div class="spech-img ">
+                <img class="rounded-circle" style="border-radius: 50px 50px 50px 50px;" src="{{asset(setting()->logo)}}" alt="">
             </div>
             <div class="spech-cont">
                 <button type="button" class="btn btn-primary btn-block" style="line-height: 48px;height: 53px;">আবেদন করার জন্য ক্লিক করুন</button>

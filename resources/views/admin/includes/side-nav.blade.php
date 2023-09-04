@@ -138,6 +138,34 @@
                                 <p>Slider</p>
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('religions.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Religion</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('designations.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Teacher Designation</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('blood-groups.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Blood Group</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('subjects.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Subject</p>
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
 
@@ -223,6 +251,30 @@
                             <a href="{{route('video-galleries.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Video gallery</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Employee
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('teachers.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Teachers</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('video-galleries.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Employee</p>
                             </a>
                         </li>
                     </ul>
