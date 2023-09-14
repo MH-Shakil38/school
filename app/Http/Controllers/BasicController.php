@@ -19,7 +19,17 @@ class BasicController extends Controller
             ->with(['category'])
             ->where('category_id',$id)->first();
         $data['category'] = MessageCategory::query()->findOrFail($id);
+
         return view('website.pages.message-details')->with($data);
+    }
+
+    public function allNotice(){
+        $data['notices'] = Document::query()
+            ->with(['category'])
+            ->where('status',1)
+            ->latest()
+            ->get();
+        return view('website.pages.all-notice')->with($data);
     }
 
     public function circular($type){
@@ -35,6 +45,7 @@ class BasicController extends Controller
             ->where('status',1)
             ->get();
         $data['category'] = Category::query()->findOrFail($type);
+        $data['categories'] = Category::query()->with(['categories'])->where('id',$data['category']->category_id)->latest()->first();
         if ($data['infos']->count() == 1){
             $data['details'] = Document::query()
                 ->where('category_id',$type)
@@ -45,6 +56,7 @@ class BasicController extends Controller
         $data['category'] = Category::query()
             ->where('id',$type)
             ->first();
+
         return view('website.pages.post-list')->with($data);
     }
 
@@ -82,5 +94,17 @@ class BasicController extends Controller
             ->latest()
             ->get();
         return view('website.pages.video')->with($data);
+    }
+
+    public function details($id){
+
+        $data['details'] = Document::query()
+            ->where('status',1)
+            ->whereNull('deleted_at')
+            ->findOrFail($id);
+
+        $data['category'] = Category::query()->findOrFail( $data['details']->category_id);
+        $data['categories'] = Category::query()->with(['categories'])->where('id',$data['details']->parent_id)->latest()->first();
+        return view('website.pages.pdf-view')->with($data);
     }
 }

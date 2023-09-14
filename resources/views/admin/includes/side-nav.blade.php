@@ -62,7 +62,36 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    আমাদের কথা
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{route('messages.index')}}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>New</p>
+                                    </a>
+                                </li>
 
+                                <li class="nav-item">
+                                    <a href="{{route('message-category.index')}}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Category</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('marquees.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>সর্বশেষ নোটিশ</p>
+                            </a>
+                        </li>
                         @forelse(menus() as $info)
                             <li class="nav-item">
                                 <a href="{{route('website.post',$info->id)}}" class="nav-link">
@@ -84,30 +113,7 @@
 {{--                        </p>--}}
 {{--                    </a>--}}
 {{--                </li>--}}
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            আমাদের কথা
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('messages.index')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>New</p>
-                            </a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a href="{{route('message-category.index')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Category</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
@@ -163,6 +169,13 @@
                             <a href="{{route('subjects.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add Subject</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('management-categories.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Management designation</p>
                             </a>
                         </li>
 
@@ -268,6 +281,13 @@
                             <a href="{{route('teachers.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Teachers</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('managements.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Management</p>
                             </a>
                         </li>
 

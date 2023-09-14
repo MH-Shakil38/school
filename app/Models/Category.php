@@ -23,6 +23,10 @@ class Category extends Model
         return $this->belongsTo(Category::class,'category_id');
     }
 
+    public function categories(){
+        return $this->hasMany(Category::class,'category_id');
+    }
+
     public function posts(){
         return $this->hasMany(Document::class,'category_id','id');
     }

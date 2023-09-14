@@ -1,4 +1,8 @@
 <?php
+
+use App\Models\Category;
+use App\Models\Document;
+
 if (!function_exists('setting')){
     function setting(){
         return \App\Models\Setting::query()->latest()->first();
@@ -30,6 +34,21 @@ if (!function_exists('sub_menus')){
     }
 }
 
+if (!function_exists('sub_menus_first')){
+    function sub_menus_first($id){
+//        $data['infos'] = Document::query()
+//            ->where('category_id',$id)
+//            ->where('status',1)
+//            ->get();
+//        $data['category'] = Category::query()->findOrFail($type);
+//        if ($data['infos']->count() == 1){
+            $data =  \App\Models\Message::query()
+                ->where('category_id',$id)
+                ->first();
+            return $data;
+    }
+}
+
 if (!function_exists('messageCategory')){
     function messageCategory(){
         return \App\Models\MessageCategory::query()->with(['message'])->where('status',1)->orderBy('position','ASC')->orderBy('created_at','ASC')->latest()->get();
@@ -58,6 +77,28 @@ if (!function_exists('VideoCategory')){
 if (!function_exists('galleryCategory')){
     function galleryCategory(){
         return \App\Models\PhotoCategory::query()->where('status',1)->orderBy('created_at','DESC')->latest()->get();
+    }
+}
+
+if (!function_exists('teachers')){
+    function teachers(){
+        return \App\Models\Teacher::query()->where('status',1)->orderBy('created_at','ASC')->latest()->get();
+    }
+}
+
+if (!function_exists('managements')){
+    function managements(){
+        return \App\Models\Management::query()->where('status',1)->orderBy('created_at','ASC')->latest()->get();
+    }
+}
+if (!function_exists('marquee')){
+    function marquee(){
+        return \App\Models\Marquee::query()->with(['notice'])->where('status',1)->orderBy('created_at','ASC')->latest()->get();
+    }
+}
+if (!function_exists('noticeBoard')){
+    function noticeBoard(){
+        return \App\Models\Document::query()->with(['category'])->where('status',1)->orderBy('created_at','ASC')->latest()->limit(15)->get();
     }
 }
 

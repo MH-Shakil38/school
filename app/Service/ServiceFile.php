@@ -13,4 +13,5 @@ class ServiceFile
     const PHOTOGALLERY  = 'photo-gallery/';
     const TEACHER_IMAGE  = 'teacher-image/';
     const TEACHER_CV     = 'teacher-cv/';
+    const DOCUMENTS     = 'document-notice/';
 }

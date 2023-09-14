@@ -74,7 +74,7 @@ class VideoGalleryController extends Controller
             'video_id'=>'required',
         ]);
         $videoGallery->update($request->all());
-        return redirect()->route('video.galleries.index')->with('success','Successfully Video Updated');
+        return redirect()->route('video-galleries.index')->with('success','Successfully Video Updated');
     }
 
     /**

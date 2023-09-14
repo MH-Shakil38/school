@@ -138,7 +138,7 @@ header
 
 /* .menu {
     margin-bottom: unset !important;
-    background-color:  green;    
+    background-color:  green;
     padding: 0;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -211,7 +211,7 @@ ul.menubar li ul li{
 }
  ul.menubar li ul li:first-child a{
     padding: 0 7px;
-} 
+}
 ul.menubar li ul li a{
     display: block;
     line-height: 40px;
@@ -374,7 +374,7 @@ nav ul li:hover .dropdown-menu {
       opacity: 1;
     }
   }
-  
+
   @keyframes slideInLeft {
     from {
       -webkit-transform: translate(-25%, 0);
@@ -430,7 +430,7 @@ section.home-notice > .col-xs-12.col-sm-12.col-md-12.col-lg-12{
     width: 20% !important;
     height: 40px;
     display: inline-block;
-    background: green;
+    background: #30654c;
     position: relative;
 }
 .home-notice-inner-box p{
@@ -564,7 +564,7 @@ a.home-achivement:hover{
     color: #01016d;
 }
 .home-chairman h3 {
-    background: #1494ec;
+    background: #30654c;
     font-size: 20px;
     font-weight: bold;
     padding: 10px 0;
@@ -878,10 +878,10 @@ p.teacher-desc-info{
     width: 24%;
     text-align: center;
 }
-.notice-download i{    
+.notice-download i{
     color: gray;
 }
-.notice-download a{    
+.notice-download a{
     color: gray;
 }
 
@@ -898,7 +898,7 @@ p.teacher-desc-info{
     display: inline-block;
     width: 70%;
 }
-form.form-inline.notice-search-form{    
+form.form-inline.notice-search-form{
     display: inline-block;
 }
 form.form-inline.notice-search-form select.form-control {
@@ -1129,7 +1129,7 @@ form.form-inline.notice-search-form select.form-control {
     /*       All Inner Page        */
     /*       All Inner Page        */
     /*       All Inner Page        */
-    /*       All Inner Page        */    
+    /*       All Inner Page        */
     .inner-page .container .row .col-xs-12.col-sm-12.col-md-8.col-lg-8{
         padding: 15px
     }
@@ -1140,7 +1140,7 @@ form.form-inline.notice-search-form select.form-control {
         float: none;
         width: 100%;
     }
- 
+
     /*       All Inner Page        */
     /*       All Inner Page        */
     /*       All Inner Page        */
@@ -1168,7 +1168,7 @@ form.form-inline.notice-search-form select.form-control {
         margin: 10px 0 0 0;
 	float: right;
 	border-radius: 0 !important;
-     }  
+     }
 
     .header-inner-content h1 {
         font-size: 18px;

@@ -36,6 +36,19 @@
         speed: 1000,
     });
 </script>
+
+<script>
+    $('.teacherGallery').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: true,
+        prevArrow: '.left',
+        nextArrow: '.right',
+        autoplaySpeed: 3000,
+        speed: 1000,
+    });
+</script>
 <script>
     $(window).scroll(function() {
         var scrolling = $(this).scrollTop();

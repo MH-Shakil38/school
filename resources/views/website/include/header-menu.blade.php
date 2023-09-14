@@ -59,12 +59,12 @@
                     @endforelse
                     <li class="dropdown">
                         <a class="dropdown-toggle " aria-haspopup="true" aria-expanded="false" role="button"
-                           data-toggle="dropdown" aria-expanded="false"> <span>ক্যাম্পাস</span> <i
+                           data-toggle="dropdown" aria-expanded="false"> <span> গ্যালারি</span> <i
                                 class="fa fa-angle-down"></i> </a>
                         <ul class="dropdown-menu">
 
-                            <li><a  href="principals-message.html"> অধ্যক্ষের বাণী</a></li>
-                            <li><a  href="chief-patron.html"> প্রধান পৃষ্ঠপোষকের বাণী</a></li>
+                            <li><a  href="{{route('video.gallery')}}">ভিডিও গ্যালারি</a></li>
+                            <li><a  href="{{route('image.gallery')}}">ফটো গ্যালারি</a></li>
 
 
                         </ul>

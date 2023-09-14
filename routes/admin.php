@@ -26,7 +26,8 @@ Route::resource('categories',\App\Http\Controllers\CategoryController::class);
 Route::resource('messages',\App\Http\Controllers\MessageController::class);
 Route::resource('message-category',\App\Http\Controllers\MessageCategoryController::class);
 Route::resource('circulars',\App\Http\Controllers\CircularController::class);
-Route::resource('posts',\App\Http\Controllers\PostController::class);
+Route::resource('marquees',\App\Http\Controllers\MarqueeController::class);
+Route::resource('documents',\App\Http\Controllers\DocumentController::class);
 
 //gallery
 Route::resource('photo-categories',\App\Http\Controllers\PhotoCategoryController::class);
@@ -36,6 +37,7 @@ Route::resource('video-galleries',\App\Http\Controllers\VideoGalleryController::
 
 //employee
 Route::resource('teachers',\App\Http\Controllers\TeacherController::class);
+Route::resource('managements',\App\Http\Controllers\ManagementController::class);
 
 
 //configurations
@@ -43,8 +45,9 @@ Route::resource('blood-groups',\App\Http\Controllers\BloodGroupController::class
 Route::resource('designations',\App\Http\Controllers\DesignationController::class);
 Route::resource('religions',\App\Http\Controllers\ReligionController::class);
 Route::resource('subjects',\App\Http\Controllers\SubjectController::class);
+Route::resource('management-categories',\App\Http\Controllers\ManagementCategoryController::class);
 
 
 
-Route::get('website-post/{id}',[\App\Http\Controllers\PostController::class,'post'])->name('website.post');
+Route::get('website-post/{id}',[\App\Http\Controllers\DocumentController::class,'post'])->name('website.post');
 

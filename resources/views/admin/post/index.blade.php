@@ -8,44 +8,44 @@
                     <h5>{{$categories[0]->category->bn_name}}</h5>
                 </div>
                 <div class="card-body">
-                    @if(isset($message))
-                        <form action="{{route('posts.update',$message->id)}}" method="post"
+                    @if(isset($document))
+                        <form action="{{route('documents.update',$document->id)}}" method="post"
                               enctype="multipart/form-data">
                             @method('PUT')
                             @else
-                                <form action="{{route('posts.store')}}" method="post" enctype="multipart/form-data">
+                                <form action="{{route('documents.store')}}" method="post" enctype="multipart/form-data">
                                     @endif
                                     @csrf
                                     <div class="row">
-                                        @if(isset($message))
+                                        @if(isset($document))
                                         <div class="col-md-1">
                                             <div class="form-group">
                                                 <label for="status">Status</label>
                                                 <select name="status" id="" class="form-control">
                                                     <option
-                                                        value="1" {{isset($message) && $message->status == 1 ? 'selected' : ''}}>
+                                                        value="1" {{isset($document) && $document->status == 1 ? 'selected' : ''}}>
                                                         Active
                                                     </option>
                                                     <option
-                                                        value="0" {{isset($message) && $message->status == 0 ? 'selected' : ''}}>
+                                                        value="0" {{isset($document) && $document->status == 0 ? 'selected' : ''}}>
                                                         De-Active
                                                     </option>
                                                 </select>
                                             </div>
                                         </div>
                                         @endif
-                                        <div class="col-md-{{isset($message)? 2:3}}">
+                                        <div class="col-md-{{isset($document)? 2:3}}">
                                             <div class="form-group">
                                                 <label for="">Type <span class="text-danger">*</span></label>
                                                 <select name="category_id" id="" class="form-control" required >
                                                     <option disabled selected>Select Type</option>
                                                     @forelse($categories as $info)
-                                                        <option value="{{$info->id}}" {{isset($message) && $message->category_id == $info->id ? 'selected' : '' }}>{{$info->bn_name}}</option>
+                                                        <option value="{{$info->id}}" {{isset($document) && $document->category_id == $info->id ? 'selected' : '' }}>{{$info->bn_name}}</option>
                                                     @empty
                                                     @endforelse
                                                 </select>
                                                 @error('category_id')
-                                                <div class="text-danger">{{ $message }}</div>
+                                                <div class="text-danger">{{ $document }}</div>
                                                 @enderror
                                             </div>
                                         </div>
@@ -53,9 +53,9 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="">Title</label>
-                                                <input type="text" name="title" id="" class="form-control" required placeholder="Write post title">
+                                                <input type="text" name="title" id="" class="form-control" required placeholder="Write post title" value="{{$document->title ?? old('title')}}">
                                                 @error('title')
-                                                <div class="text-danger">{{ $message }}</div>
+                                                <div class="text-danger">{{ $document }}</div>
                                                 @enderror
                                             </div>
                                         </div>
@@ -64,6 +64,9 @@
                                             <div class="form-group">
                                                 <label for="">File <small>(pdf/image)</small></label>
                                                 <input type="file" name="file" id="" class="form-control">
+                                                @error('file')
+                                                    <span class="text-danger">{{$message}}</span>
+                                                @enderror
                                             </div>
                                         </div>
 
@@ -72,7 +75,7 @@
                                             <div class="form-group">
                                                 <label for="">Details</label>
                                                   <textarea id="summernote" name="details">
-                                                      {!!  $message->details ?? old('details')!!}
+                                                      {!!  $document->details ?? old('details')!!}
                                                     </textarea>
                                             </div>
                                         </div>
@@ -109,7 +112,7 @@
                         </thead>
 
                         <tbody>
-                        @forelse($posts as $info)
+                        @forelse($documents as $info)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$info->category->bn_name}}</td>
@@ -129,8 +132,8 @@
                                     @if(isset($slider) && $slider->id == $info->id)
                                         <span class="badge bg-warning"> Updating...</span>
                                     @else
-                                        <a href="{{route('posts.edit',$info->id)}}" class="btn btn-info"> <i class="fa fa-edit"></i> </a>
-                                        <a href="{{route('posts.edit',$info->id)}}" class="btn btn-danger"> <i class="fa fa-trash"></i> </a>
+                                        <a href="{{route('documents.edit',$info->id)}}" class="btn btn-info"> <i class="fa fa-edit"></i> </a>
+                                        <a href="{{route('documents.edit',$info->id)}}" class="btn btn-danger"> <i class="fa fa-trash"></i> </a>
                                     @endif
                                 </td>
                             </tr>

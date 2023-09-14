@@ -26,6 +26,7 @@
                             <a href="{{route('image.gallery')}}"><i class="fa fa-image" aria-hidden="true"></i> / <span>ফটো গ্যালারি</span><hr></a>
                             @forelse(galleryCategory() as $info)
                             <a  href="{{route('category.gallery',$info->id)}}"><i class="fa fa-image" aria-hidden="true"></i> / <span> {{$info->name}}</span></a>
+                                <br>
                             @empty @endforelse
 
                         </div>

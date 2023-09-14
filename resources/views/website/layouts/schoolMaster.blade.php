@@ -27,6 +27,13 @@
         padding: 5px 10px 5px 0;
         display: block;
     }
+    .teacher-slider .slick-track {
+        height: 260px;
+    }
+    .details p {
+        font-size: 16px !important;
+        text-align: justify;
+    }
 </style>
 <!DOCTYPE html>
 <html lang="en">

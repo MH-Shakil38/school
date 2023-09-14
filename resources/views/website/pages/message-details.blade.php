@@ -27,15 +27,24 @@
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div class="inner-pager-box">
                         <div class="inner-page-title">
-                            <a href=""><i class="fa fa-home" aria-hidden="true"></i></a> / <span>আমাদের কথা / {{$category->name ?? ''}}</span>
+                            <a href=""><i class="fa fa-home" aria-hidden="true"></i></a> / <span>আমাদের কথা </span>
+                            <hr>
+
+                            @forelse(messageCategory() as $info)
+                                @if($info->id == $category->id)
+                                <a href="{{route('message.details',$info->id)}}" style="background: #413c3c; display: block; padding: 6px;  color: #fff;"><i class="fa fa-home" aria-hidden="true"></i>/ <span> {{$info->name ?? ''}}</span></a>
+                                @else
+                                <a href="{{route('message.details',$info->id)}}"><i class="fa fa-home" aria-hidden="true"></i>/ <span> {{$info->name ?? ''}}</span></a>
+                                <br>
+                                @endif
+                            @empty
+                            @endforelse
+
                         </div>
                     </div>
-                    <div class="inner-pager-box" style="margin: 10px 0;">
-                        <div class="inner-page-title">
-                            <i class="fa fa-file-video-o" aria-hidden="true"></i> Suggested Video
-                        </div>
-                    </div>
+
                 </div>
+
             </div>
         </div>
     </section>
