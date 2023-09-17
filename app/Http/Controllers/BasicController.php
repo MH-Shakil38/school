@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Circular;
 use App\Models\Document;
+use App\Models\Management;
 use App\Models\Message;
 use App\Models\MessageCategory;
 use App\Models\PhotoGallery;
+use App\Models\Teacher;
 use App\Models\VideoCategory;
 use App\Models\VideoGallery;
 use Illuminate\Http\Request;
@@ -107,4 +109,23 @@ class BasicController extends Controller
         $data['categories'] = Category::query()->with(['categories'])->where('id',$data['details']->parent_id)->latest()->first();
         return view('website.pages.pdf-view')->with($data);
     }
+
+    public function teacherDetails($id,$name=null){
+        $data['teacher'] = Teacher::findById($id);
+        return view('website.pages.teacher-details')->with($data);
+    }
+    public function managementDetails($id){
+        $data['management'] = Management::findById($id);
+        return view('website.pages.management-details')->with($data);
+    }
+    public function teacherList()
+    {
+        return view('website.pages.teacher-list');
+    }
+    public function managementList()
+    {
+        return view('website.pages.management-list');
+    }
+
+
 }

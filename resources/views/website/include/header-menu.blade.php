@@ -70,10 +70,10 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle " href="contact.html"> <span>যোগাযোগ </span> </a>
+                        <a class="dropdown-toggle " href="#"> <span>যোগাযোগ </span> </a>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle " href="https://ccpc.odhyyon.com/portal">
+                        <a class="dropdown-toggle " href="#">
                             <span>শিক্ষার্থী লগ ইন </span> </a>
                     </li>
                 </ul>

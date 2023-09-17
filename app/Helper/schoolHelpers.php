@@ -88,7 +88,7 @@ if (!function_exists('teachers')){
 
 if (!function_exists('managements')){
     function managements(){
-        return \App\Models\Management::query()->where('status',1)->orderBy('created_at','ASC')->latest()->get();
+        return \App\Models\Management::query()->where('status',1)->orderBy('position','ASC')->orderBy('created_at','ASC')->latest()->get();
     }
 }
 if (!function_exists('marquee')){
@@ -99,6 +99,12 @@ if (!function_exists('marquee')){
 if (!function_exists('noticeBoard')){
     function noticeBoard(){
         return \App\Models\Document::query()->with(['category'])->where('status',1)->orderBy('created_at','ASC')->latest()->limit(15)->get();
+    }
+}
+
+if (!function_exists('teacherNOImage')){
+    function teacherNOImage(){
+        return asset('school/teacher.png');
     }
 }
 

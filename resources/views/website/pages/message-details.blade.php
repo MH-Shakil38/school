@@ -8,15 +8,20 @@
                         <div class="inner-page-content">
                             <div class="speech-box">
                                 @if(isset($message->image))
-                                <div class="speech-img text-center">
-                                    <img src="{{asset($message->image?? setting()->logo)}}"
-                                        class="d-block w-100" alt="">
-                                    <span>{{$message->title ?? ''}}</span>
-                                </div>
+                                    <div class="speech-img text-center">
+                                        @if($message->id == 4)
+                                            <img src="{{asset($message->image ?? setting()->logo)}}"
+                                                 class="d-block w-100" alt="" style="height: 350px;width: 100%">
+                                        @else
+                                            <img src="{{asset($message->image ?? setting()->logo)}}"
+                                                 class="d-block w-100" alt="">
+                                        @endif
+                                        <span>{{$message->title ?? ''}}</span>
+                                    </div>
                                 @endif
                                 <div class="seech-content">
                                     <div class="details">
-                                                {!! $message->details ?? '' !!}
+                                        {!! $message->details ?? '' !!}
                                     </div>
                                 </div>
                             </div>
@@ -32,10 +37,15 @@
 
                             @forelse(messageCategory() as $info)
                                 @if($info->id == $category->id)
-                                <a href="{{route('message.details',$info->id)}}" style="background: #413c3c; display: block; padding: 6px;  color: #fff;"><i class="fa fa-home" aria-hidden="true"></i>/ <span> {{$info->name ?? ''}}</span></a>
+                                    <a href="{{route('message.details',$info->id)}}"
+                                       style="background: #413c3c; display: block; padding: 6px;  color: #fff;"><i
+                                            class="fa fa-home" aria-hidden="true"></i>/
+                                        <span> {{$info->name ?? ''}}</span></a>
                                 @else
-                                <a href="{{route('message.details',$info->id)}}"><i class="fa fa-home" aria-hidden="true"></i>/ <span> {{$info->name ?? ''}}</span></a>
-                                <br>
+                                    <a href="{{route('message.details',$info->id)}}"><i class="fa fa-home"
+                                                                                        aria-hidden="true"></i>/
+                                        <span> {{$info->name ?? ''}}</span></a>
+                                    <br>
                                 @endif
                             @empty
                             @endforelse
@@ -49,8 +59,8 @@
         </div>
     </section>
     <style>
-        .inner-pager-box{
-            padding: 40px!important;
+        .inner-pager-box {
+            padding: 40px !important;
         }
     </style>
 

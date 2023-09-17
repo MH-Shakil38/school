@@ -103,8 +103,8 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                                  <textarea id="summernote" name="details">
-                                                      {!!  $management->message ?? old('details')!!}
+                                                  <textarea id="summernote" name="message">
+                                                      {!!  $management->message ?? old('message')!!}
                                                     </textarea>
                                 </div>
                             </div>

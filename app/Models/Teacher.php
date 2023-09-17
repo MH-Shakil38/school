@@ -29,6 +29,7 @@ class Teacher extends Model
         'father_name',
         'mother_name',
         'status',
+        'subject_id',
         'facebook',
         'youtube',
         'whatsapp',
@@ -36,7 +37,21 @@ class Teacher extends Model
         'updated_by'
     ];
 
+    public function subject(){
+        return $this->belongsTo(Subject::class,'subject_id');
+    }
+    public function blood(){
+        return $this->belongsTo(BloodGroup::class,'blood_group_id');
+    }
+    public function designation(){
+        return $this->belongsTo(Designation::class,'designation_id');
+    }
+
     public static function allTeacher($status=0){
-        return self::query()->where('status',$status)->orderBy('id','ASC')->get();
+        return self::query()->with(['designation'])->where('status',$status)->orderBy('id','ASC')->get();
+    }
+
+    public static function findById($id){
+        return self::query()->with(['designation','subject','blood'])->findOrFail($id);
     }
 }

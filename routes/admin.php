@@ -49,5 +49,6 @@ Route::resource('management-categories',\App\Http\Controllers\ManagementCategory
 
 
 
-Route::get('website-post/{id}',[\App\Http\Controllers\DocumentController::class,'post'])->name('website.post');
+Route::get('website-post/{id}',[\App\Http\Controllers\DocumentController::class,'post
+'])->name('website.post');
 

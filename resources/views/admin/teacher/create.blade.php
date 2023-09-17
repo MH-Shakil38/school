@@ -204,7 +204,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label for="name">Joining Date</label>
-                                                <input type="date"  name="join_date" id="" class="form-control" value="{{isset($designation) ? $designation->join_date : old('join_date')}}">
+                                                <input type="date"  name="join_date" id="" class="form-control" value="{{isset($teacher) ? $teacher->join_date : old('join_date')}}">
                                                 @error('join_date')
                                                 <div class="text-danger">{{$message}}</div>
                                                 @enderror
@@ -217,7 +217,7 @@
                                                 <select name="designation_id" id="" class="form-control">
                                                     <option disabled selected>Select Designation</option>
                                                     @forelse($designations as $info)
-                                                        <option {{isset($designation) && $designation->id == $info ? 'selected' : ''}} value="{{$info->id}}">{{$info->name}}</option>
+                                                        <option {{isset($teacher) && $info->id == $teacher->designation_id ? 'selected' : ''}} value="{{$info->id}}">{{$info->name}}</option>
                                                     @empty
                                                     @endforelse
                                                 </select>
@@ -242,7 +242,7 @@
                                                 <select name="subject_id" id="" class="form-control">
                                                     <option disabled selected>Select Subject</option>
                                                     @forelse($subjects as $info)
-                                                        <option value="{{$info->id}}">{{$info->name}}</option>
+                                                        <option value="{{$info->id}}" {{isset($teacher) && $info->id == $teacher->subject_id ? 'selected' : ''}}>{{$info->name}}</option>
                                                     @empty
                                                     @endforelse
                                                 </select>

@@ -21,4 +21,12 @@ class Management extends Model
         'created_by',
         'updated_by'
     ];
+
+    public function designation(){
+        return $this->belongsTo(ManagementCategory::class,'designation_id');
+    }
+
+    public static function findById($id){
+        return self::query()->with(['designation'])->findOrFail($id);
+    }
 }
