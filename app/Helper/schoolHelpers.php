@@ -93,7 +93,7 @@ if (!function_exists('managements')){
 }
 if (!function_exists('marquee')){
     function marquee(){
-        return \App\Models\Marquee::query()->with(['notice'])->where('status',1)->orderBy('created_at','ASC')->latest()->get();
+        return \App\Models\marquee::query()->with(['notice'])->where('status',1)->orderBy('created_at','ASC')->latest()->get();
     }
 }
 if (!function_exists('noticeBoard')){
