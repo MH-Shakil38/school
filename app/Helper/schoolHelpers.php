@@ -108,3 +108,9 @@ if (!function_exists('teacherNOImage')){
     }
 }
 
+if (!function_exists('banner')){
+    function banner(){
+        return \App\Models\Banner::query()->where('status',1)->orderBy('position','ASC')->orderBy('id','DESC')->first();
+    }
+}
+

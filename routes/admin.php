@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BannerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +48,9 @@ Route::resource('religions',\App\Http\Controllers\ReligionController::class);
 Route::resource('subjects',\App\Http\Controllers\SubjectController::class);
 Route::resource('management-categories',\App\Http\Controllers\ManagementCategoryController::class);
 
+
+/**banner routes*/
+Route::resource('banners',BannerController::class);
 
 
 Route::get('website-post/{id}',[\App\Http\Controllers\DocumentController::class,'post

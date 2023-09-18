@@ -13,7 +13,7 @@
                 <img src="{{asset('admin/')}}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">{{auth()->user()->name}}</a>
             </div>
         </div>
 
@@ -45,7 +45,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link">
+                            <a href="{{url('/')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Dashboard</p>
                             </a>
@@ -137,6 +137,13 @@
                             </a>
                         </li>
 
+
+                        <li class="nav-item">
+                            <a href="{{route('banners.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Banner</p>
+                            </a>
+                        </li>
 
                         <li class="nav-item">
                             <a href="{{route('slider.index')}}" class="nav-link">
