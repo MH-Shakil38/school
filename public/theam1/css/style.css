@@ -430,7 +430,7 @@ section.home-notice > .col-xs-12.col-sm-12.col-md-12.col-lg-12{
     width: 20% !important;
     height: 40px;
     display: inline-block;
-    background: #30654c;
+    background: #008000;
     position: relative;
 }
 .home-notice-inner-box p{
@@ -564,7 +564,7 @@ a.home-achivement:hover{
     color: #01016d;
 }
 .home-chairman h3 {
-    background: #30654c;
+    background: #008000;
     font-size: 20px;
     font-weight: bold;
     padding: 10px 0;

@@ -277,6 +277,38 @@
             </div>
         </div>
     </div>
+        <div class="home-chairman chairman-box mt-1">
+            <h3>Developed By</h3>
+            <a href="https://www.facebook.com/maynuddin.shakil" class="speach">
+                <div class="">
+                    <div class="inner-pager-box" style="height: 240px">
+                        <div class="inner-page-content">
+                            <div class="speech-box">
+                                <div class="speech-img text-center" >
+                                    <img  height="120" style="width: 75px !important;" src="{{asset('/maynuddin.jpg')}}"
+                                          class="d-block w-100 m-auto " alt="">
+                                    <h4>Maynuddin Hasan</h4>
+                                    <span>Software Engineer</span><br>
+                                    <span>At Asian Television</span>
+                                </div>
+                                <div class="seech-content" style="margin-top: 10px">
+                                    <div class="details" style="color:black;max-height: 112px;overflow: hidden;text-align: justify;line-height: 28px;display: -webkit-box;-webkit-line-clamp: 4; -webkit-box-orient: vertical;">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{--                <div class="spech-img">--}}
+                    {{--                    <img src="{{asset($info->message->image ?? '')}}" alt="">--}}
+                    {{--                </div>--}}
+                    {{--                <div class="spech-cont">--}}
+                    {{--                    <h4>{{$info->message->title ?? ''}}</h4>--}}
+                    {{--                    <span>Chief Patron</span>--}}
+                    {{--                </div>--}}
+                </div>
+            </a>
+        </div>
     <div class="home-chairman mt-1">
         <h3>ভিজিটর কাউন্টার</h3>
         <div class="count-table">
