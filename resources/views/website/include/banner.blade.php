@@ -13,8 +13,8 @@
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); position: relative;bottom: -231px;color: #ffffff;">
             <div class="d-flex justify-content-center align-items-center h-100">
                 <div class="text-white">
-                    <h1 class="mb-3">Heading</h1>
-                    <h4 class="mb-3">Subheading</h4>
+                    <h1 class="mb-3">{{banner()->heading}}</h1>
+                    <h4 class="mb-3">{{banner()->title}}</h4>
                     <a  class="btn btn-outline-danger btn-lg" href="#!" role="button"style="color: white;font-weight: bold;"
                     >Read More</a
                     >
@@ -27,6 +27,10 @@
         @media only screen and (max-width: 600px) {
             .bg-image {
                height: 281px !important;
+            }
+            .mask{
+            bottom: -153px;
+            color: #ffffff;
             }
         }
     </style>

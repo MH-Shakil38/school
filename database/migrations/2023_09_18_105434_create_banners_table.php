@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('heading')->nullable();
             $table->string('title')->nullable();
             $table->string('image');
-            $table->string('details')->nullable();
+            $table->longText('details')->nullable();
             $table->tinyInteger('status')->default(1);
             $table->tinyInteger('position')->nullable();
             $table->unsignedBigInteger('created_by')->nullable();

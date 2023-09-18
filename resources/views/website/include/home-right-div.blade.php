@@ -284,12 +284,14 @@
                     <div class="inner-pager-box" style="height: 240px">
                         <div class="inner-page-content">
                             <div class="speech-box">
-                                <div class="speech-img text-center" >
+                                <div class="speech-img text-center" style="color: black;">
                                     <img  height="120" style="width: 75px !important;" src="{{asset('/maynuddin.jpg')}}"
                                           class="d-block w-100 m-auto " alt="">
-                                    <h4>Maynuddin Hasan</h4>
-                                    <span>Software Engineer</span><br>
-                                    <span>At Asian Television</span>
+                                    <div class="" style="background: #6e7a6c5e">
+                                        <h4 style="margin-bottom: 0px">Engr. Maynuddin Hasan</h4>
+                                        <span class="border-bottom">Software Engineer</span><br>
+                                        <span>At Asian Television Ltd.</span>
+                                    </div>
                                 </div>
                                 <div class="seech-content" style="margin-top: 10px">
                                     <div class="details" style="color:black;max-height: 112px;overflow: hidden;text-align: justify;line-height: 28px;display: -webkit-box;-webkit-line-clamp: 4; -webkit-box-orient: vertical;">
