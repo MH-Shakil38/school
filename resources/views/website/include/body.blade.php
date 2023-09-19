@@ -11,19 +11,19 @@
                    @include('website.include.home-slider')
 
                 </div>
-                <div class="page-box mt-1">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="box-heading">
-                                <h3></h3>
+{{--                <div class="page-box mt-1">--}}
+{{--                    <div class="row">--}}
+{{--                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">--}}
+{{--                            <div class="box-heading">--}}
+{{--                                <h3></h3>--}}
 
-                                <div>
+{{--                                <div>--}}
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
                 @include('website.include.gallery-event')
 

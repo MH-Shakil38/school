@@ -69,8 +69,12 @@
 
                         </ul>
                     </li>
+{{--                    <li class="dropdown">--}}
+{{--                        <a class="dropdown-toggle " href="#"> <span>যোগাযোগ </span> </a>--}}
+{{--                    </li>--}}
+
                     <li class="dropdown">
-                        <a class="dropdown-toggle " href="#"> <span>যোগাযোগ </span> </a>
+                        <a class="dropdown-toggle " href="{{route('post.show',22)}}"> <span>নোটিশবোর্ড </span> </a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle " href="#">
