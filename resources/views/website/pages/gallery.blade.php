@@ -3,7 +3,7 @@
     <section class="inner-page">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="box-inner row">
                         @forelse(gallery() as $info)
                         <div class="col-md-4" style="margin-bottom: 20px">
