@@ -12,7 +12,7 @@
                             <marquee class="scroll-title" behavior="" direction="" onmouseover="this.stop();" onmouseout="this.start();">
                                 <ul class="noticeScroll">
                                     @forelse(marquee() as $info)
-                                        <li><a href="{{route('notice.details',$info->notice_id)}}" target="_blink" > /*{{$info->name ?? $info->notice->title}}*/</a> </li>
+                                        <li><a href="{{route('notice.details',$info->notice_id)}}" target="_blink" > /*{{$info->name ?? $info->notice->title ?? ''}}*/</a> </li>
                                     @empty
                                     @endforelse
 {{--                                    <li><a href="notice-board/achievements-2023.html" target="_blink" >***Achievements 2023***</a> </li>--}}
