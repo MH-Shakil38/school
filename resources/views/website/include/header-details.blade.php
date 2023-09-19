@@ -16,7 +16,7 @@
                 <div class="header-content">
                     <div class="header-logo-img">
                         <a href="{{url('/')}}">
-                            <img src="{{asset(setting()->logo) ?? ''}}" alt="" class="">
+                            <img src="{{asset(setting()->logo) ?? ''}}" alt="" class="d-block w-100">
                         </a>
                     </div>
                 </div>
