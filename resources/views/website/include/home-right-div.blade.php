@@ -285,7 +285,7 @@
                         <div class="inner-page-content">
                             <div class="speech-box">
                                 <div class="speech-img text-center" style="color: black;">
-                                    <img  height="120" style="width: 75px !important;" src="{{asset('/maynuddin.jpg')}}"
+                                    <img  height="120" style="width: 130px !important;" src="{{asset('/maynuddin.jpg')}}"
                                           class="d-block w-100 m-auto " alt="">
                                     <div class="" style="background: #6e7a6c5e">
                                         <h4 style="margin-bottom: 0px">Engr. Maynuddin Hasan</h4>
