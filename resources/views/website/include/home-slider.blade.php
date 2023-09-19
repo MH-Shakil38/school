@@ -14,7 +14,7 @@
                 <div class="carousel-inner" role="listbox">
                     @forelse(slider() as $info)
                         <div class="item  {{$loop->iteration == 1 ? 'active' : ''}} ">
-                            <img src="{{asset($info->image)}}" alt="..." class="img-responsive">
+                            <img src="{{asset($info->image)}}" alt="..." class="img-responsive" loading="lazy">
                             <div class="carousel-caption"></div>
                         </div>
                     @empty

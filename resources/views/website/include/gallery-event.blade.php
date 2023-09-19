@@ -10,7 +10,7 @@
             <div class="row">
                 <a href="{{route('message.details',6)}}">
                 <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 ">
-                    <img style="height: 75%;width: 106%;margin-top: 1%" src="{{asset($history->image ?? setting()->logo)}}" height="" alt="">
+                    <img style="height: 75%;width: 106%;margin-top: 1%" src="{{asset($history->image ?? setting()->logo)}}" height="" alt="" loading="lazy">
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 ">
                     <div class="history"
@@ -51,7 +51,7 @@
                         @forelse(managements() as $info)
                             <div class="photo-slide singCourse_imgarea">
                                 <a  href="{{route('management.details',$info->id)}}">
-                                    <img  style="height: 174px; border: 7px solid #008000" src="{{asset($info->image)}}" class="-mg-fulid w-100" alt="">
+                                    <img  style="height: 174px; border: 7px solid #008000" src="{{asset($info->image)}}" class="-mg-fulid w-100" alt="" loading="lazy">
                                 </a>
                                 <div class="bg-danger text-center" style="background: #2d483a;padding: 2px;font-weight: bold" >
                                     <span href="" style="color: #FFFFFF"><i style="margin-right: 5px" class="fa fa-user mr-1"></i>{{$info->name}}</span>
@@ -88,7 +88,7 @@
                         @forelse(teachers() as $info)
                             <div class="photo-slide singCourse_imgarea">
                                 <a  href="{{route('teacher.details',[$info->id,str_replace($info->name,' ','-')])}}">
-                                    <img  style="height: 174px; border: 7px solid #008000" src="{{asset($info->image)}}" class="-mg-fulid w-100" alt="">
+                                    <img  style="height: 174px; border: 7px solid #008000" src="{{asset($info->image)}}" class="-mg-fulid w-100" alt="" loading="lazy">
                                 </a>
                                 <div class="bg-danger text-center" style="background: #2d483a;padding: 2px;font-weight: bold" >
                                     <span href="" style="color: #FFFFFF"><i style="margin-right: 5px" class="fa fa-user mr-1"></i>{{$info->name}}</span>
@@ -158,7 +158,7 @@
             <div class="mx-0 photoGallery">
                 @forelse(videos() as $info)
                     <div class="videoGallaryImage">
-                        <img src="https://img.youtube.com/vi/{{ $info->video_id }}/maxresdefault.jpg" alt="{{ $info->title }}" alt="" class="" height="195" width="100%">
+                        <img src="https://img.youtube.com/vi/{{ $info->video_id }}/maxresdefault.jpg" alt="{{ $info->title }}" alt="..." class="" height="195" width="100%" loading="lazy">
                         <div class="playbutton text-center">
                             <a class="venobox vbox-item" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/embed/{{ $info->video_id }}"><i class="fa fa-play"></i></a>
                         </div>
@@ -185,7 +185,7 @@
                 @forelse(gallery() as $info)
                     <div class="photo-slide singCourse_imgarea">
                         <a class="venobox vbox-item" data-gall="gallery01" href="{{asset($info->image)}}">
-                            <img src="{{asset($info->image)}}" class="-mg-fulid w-100" alt="">
+                            <img src="{{asset($info->image)}}" class="-mg-fulid w-100" alt="" loading="lazy">
                         </a>
                     </div>
                 @empty
