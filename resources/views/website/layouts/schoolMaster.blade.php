@@ -38,6 +38,9 @@
     .details img {
         max-width: 100%;
     }
+    .bg2 .container {
+        display: none;
+    }
 </style>
 <!DOCTYPE html>
 <html lang="en">
