@@ -100,6 +100,7 @@ header
     margin: 15px 25px 15px 15px;
     border-radius: 50%;
      max-width: 110px;
+     max-height: 110px;
     /* width: 100%; */
 }
 .underline {
