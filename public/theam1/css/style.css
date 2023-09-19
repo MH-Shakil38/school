@@ -1152,7 +1152,7 @@ form.form-inline.notice-search-form select.form-control {
     .header-logo-img a img,
     .header-left-img img{
         width: 100%;
-        height: auto;
+        height: 90px;
     }
     .navbar-toggle {
         margin-right: 0;
