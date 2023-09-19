@@ -40,7 +40,11 @@
                                                 <select name="category_id" id="" class="form-control" required >
                                                     <option disabled selected>Select Type</option>
                                                     @forelse($categories as $info)
-                                                        <option value="{{$info->id}}" {{isset($document) && $document->category_id == $info->id ? 'selected' : '' }}>{{$info->bn_name}}</option>
+                                                        <option
+                                                            value="{{$info->id}}"
+                                                            {{isset($document) && $document->category_id == $info->id ? 'selected' : (isset($selected) && $selected == $info->id ? 'selected': '') }}>
+                                                            {{$info->bn_name}}
+                                                        </option>
                                                     @empty
                                                     @endforelse
                                                 </select>

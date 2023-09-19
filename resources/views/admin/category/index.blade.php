@@ -26,7 +26,7 @@
                                                 <select name="category_id" id="" class="form-control">
                                                     <option value=""> Select Parent Category</option>
                                                     @forelse($categories as $info)
-                                                        <option value="{{$info->id}}" {{session()->get('cat') ==$info->id ? 'selected' :  (isset($category) && $category->category_id == $info ? 'selected' : '')}}>
+                                                        <option value="{{$info->id}}" {{session()->get('cat') ==$info->id ? 'selected' :  (isset($category) && $category->category_id == $info->id ? 'selected' : '')}}>
                                                             {{$info->bn_name}}
                                                         </option>
                                                     @empty

@@ -16,14 +16,20 @@ class DocumentController extends Controller
      */
     public function index()
     {
-        $data['categories'] = Category::query()->where('category_id',$id)->with(['posts'])->where('status',1)->get();
-        $data['posts']      = Document::query()->with(['category'])->where('parent_id',$id)->get();
+        $data['categories'] = Category::query()->with(['posts'])->where('status',1)->get();
+        $data['posts']      = Document::query()->with(['category'])->get();
         return view('admin.post.index')->with($data);
     }
 
-    public function post($id)
+    public function post(Request $request,$id)
     {
-        $data['categories'] = Category::query()->where('category_id',$id)->with(['posts'])->where('status',1)->get();
+        if ($request->id == 10){
+            $data['selected'] = 20;
+        }
+        if ($request->id == 21){
+            $data['selected'] = 22;
+        }
+        $data['categories'] = Category::query()->where('category_id',$id)->with(['posts'])->where('status',1)->orderBy('position','ASC')->orderBy('id','desc')->get();
         $data['documents']      = Document::query()->with(['category'])->where('parent_id',$id)->get();
         return view('admin.post.index')->with($data);
     }

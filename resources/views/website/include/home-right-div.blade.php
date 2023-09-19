@@ -272,7 +272,7 @@
         <div class="footer-social">
             <div class="embed-responsive embed-responsive-16by9" style="width: 109%">
 
-                <a class="w-100" href="https://www.facebook.com/ichamati.ymhs.7" target="_blank"><img class="w-100" style="background: no-repeat" src="{{setting()->logo ?? ''}}" alt=""></a>
+                <a class="w-100" href="https://web.facebook.com/profile.php?id=100024065233822" target="_blank"><img class="w-100" style="background: no-repeat;height: 215px" src="{{setting()->logo ?? ''}}" alt=""></a>
 {{--                <iframe class="embed-responsive-item"  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FChattogram-Cantonment-Public-College-CCPC-365141890721716%2F&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" style="border: none; overflow: hidden" scrolling="no" allowtransparency="true" width="100%" height="250" frameborder="0"></iframe>--}}
             </div>
         </div>

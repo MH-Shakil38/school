@@ -58,7 +58,8 @@ class CategoryController extends Controller
     {
         $data['allCategories'] = Category::query()->with(['category'])->latest()->get();
         $data['category']  = Category::query()->findOrFail($id);
-        $data['categories'] = Category::query()->latest()->get();
+//        $data['categories'] = Category::query()->latest()->get();
+        $data['categories'] = Category::query()->whereNull('category_id')->latest()->get();
         return view('admin.category.index')->with($data);
     }
 

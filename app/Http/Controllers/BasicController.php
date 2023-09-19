@@ -42,6 +42,9 @@ class BasicController extends Controller
         return view('website.pages.pdf-list')->with($data);
     }
     public function menuPost($type){
+        if ($type == 25){
+            return view('website.pages.teacher-list');
+        }
         $data['infos'] = Document::query()
             ->where('category_id',$type)
             ->where('status',1)

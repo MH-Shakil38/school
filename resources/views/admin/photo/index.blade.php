@@ -74,8 +74,8 @@
                       @forelse($photos as $info)
                           <div class="col-md-2 col-lg-2 col-sm-12">
                               <div class="card">
-                                      <img style="width: 100%;max-height: 120px;min-height: 120px" src="{{asset($info->image)}}" alt="">
-                                  <div class="card-footer bg-gray">
+                                      <img style="width: 100%;max-height: 154px;min-height: 154px" src="{{asset($info->image)}}" alt="">
+                                  <div class="bg-cyan">
                                       <a href="{{route('photo-galleries.edit',$info->id)}}" class="float-right  ml-2"><i class="fa fa-edit"></i></a>
                                       <a href="" class="text-danger float-right"><i class="fa fa-trash"></i></a>
                                   </div>
