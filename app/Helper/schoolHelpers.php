@@ -2,6 +2,7 @@
 
 use App\Models\Category;
 use App\Models\Document;
+use App\Models\GalleryImage;
 
 if (!function_exists('setting')){
     function setting(){
@@ -58,7 +59,7 @@ if (!function_exists('messageCategory')){
 
 if (!function_exists('gallery')){
     function gallery(){
-        return \App\Models\PhotoGallery::query()->where('status',1)->orderBy('created_at','DESC')->latest()->get();
+        return \App\Models\GalleryImage::query()->where('status',1)->orderBy('created_at','DESC')->latest()->get();
     }
 }
 

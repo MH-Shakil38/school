@@ -10,7 +10,7 @@
                             <div class="single_course">
                                 <div class="singCourse_imgarea">
                                     <a class="venobox vbox-item" data-gall="gallery01" href="{{asset($info->image)}}">
-                                        <img src="{{asset($info->image)}}" alt="" class="img-fulid w-100">
+                                        <img style="max-height: 230px;min-height: 230px" src="{{asset($info->image)}}" alt="" class="img-fulid w-100">
                                     </a>
                                 </div>
                             </div>
