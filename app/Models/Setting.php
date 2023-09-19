@@ -13,6 +13,7 @@ class Setting extends Model
         'bn_name',
         'en_name',
         'phone',
+        'email',
         'eiin',
         'code',
         'logo',
