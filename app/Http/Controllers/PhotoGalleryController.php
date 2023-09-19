@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GalleryImage;
 use App\Models\PhotoCategory;
 use App\Models\PhotoGallery;
 use App\Service\ServiceFile;
 use App\Trait\schoolTrait;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PhotoGalleryController extends Controller
 {
@@ -17,6 +19,7 @@ class PhotoGalleryController extends Controller
     public function index()
     {
         $data['photos'] = PhotoGallery::query()->latest()->whereNull('deleted_at')->get();
+        $data['gallery_photos'] = GalleryImage::query()->latest()->get();
         $data['categories'] = PhotoCategory::query()->where('status',1)->latest()->get();
         return view('admin.photo.index')->with($data);
     }
@@ -37,12 +40,35 @@ class PhotoGalleryController extends Controller
         $request->validate([
             'image'=>'required',
         ]);
-        $data = $request->all();
-        if ($request->hasFile('image')){
-            $data['image'] = self::imageUpload($request->image,ServiceFile::PHOTOGALLERY);
+        try {
+            DB::beginTransaction();
+
+            $data = $request->only(['category_id','title']);
+            $store = PhotoGallery::query()->create($data);
+
+//            dd($request->image);
+
+
+
+            if ($request->hasFile('image')){
+                foreach ($request->image as $info){
+                $image = self::imageUpload($info,ServiceFile::PHOTOGALLERY);
+                    GalleryImage::query()->create(
+                        [
+                            'post_id'=>$store->id,
+                            'image'=>$image
+                        ]);
+                }
+            }
+
+            DB::commit();
+            return redirect()->back()->with('success','Successfully Photo Added');
+
+        }catch (\Throwable $e){
+            DB::rollBack();
+            dd($e->getMessage());
         }
-        PhotoGallery::query()->create($data);
-        return redirect()->back()->with('success','Successfully Photo Added');
+
 
     }
 
@@ -73,8 +99,9 @@ class PhotoGalleryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PhotoGallery $photoGallery)
+    public function destroy(PhotoGallery $photoGallery,$id)
     {
-        //
+        GalleryImage::query()->findOrFail($id)->delete();
+        return redirect()->back()->with('success','Successfully Photo deleted');
     }
 }

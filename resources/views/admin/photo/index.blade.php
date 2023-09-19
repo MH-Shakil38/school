@@ -43,7 +43,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="">Galllery Image <small>(image)</small></label>
-                                                <input type="file" name="image" id="" class="form-control">
+                                                <input type="file" name="image[]" id="" class="form-control" multiple>
                                                 @error('image')
                                                 <div class="text-danger">{{ $message }}</div>
                                                 @enderror
@@ -71,13 +71,13 @@
                 </div>
                 <div class="card-body">
                   <div class="row">
-                      @forelse($photos as $info)
+                      @forelse($gallery_photos as $info)
                           <div class="col-md-2 col-lg-2 col-sm-12">
                               <div class="card">
                                       <img style="width: 100%;max-height: 154px;min-height: 154px" src="{{asset($info->image)}}" alt="">
                                   <div class="bg-cyan">
                                       <a href="{{route('photo-galleries.edit',$info->id)}}" class="float-right  ml-2"><i class="fa fa-edit"></i></a>
-                                      <a href="" class="text-danger float-right"><i class="fa fa-trash"></i></a>
+                                          <a href="{{route('photo-galleries.delete',$info->id)}}" class="text-danger float-right"><i class="fa fa-trash"></i></a>
                                   </div>
                               </div>
                           </div>

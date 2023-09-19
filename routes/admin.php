@@ -36,6 +36,8 @@ Route::resource('photo-galleries',\App\Http\Controllers\PhotoGalleryController::
 Route::resource('video-categories',\App\Http\Controllers\VideoCategoryController::class);
 Route::resource('video-galleries',\App\Http\Controllers\VideoGalleryController::class);
 
+Route::get('photo-galleries/delete/{id}',[\App\Http\Controllers\PhotoGalleryController::class,'destroy'])->name('photo-galleries.delete');
+
 //employee
 Route::resource('teachers',\App\Http\Controllers\TeacherController::class);
 Route::resource('managements',\App\Http\Controllers\ManagementController::class);
