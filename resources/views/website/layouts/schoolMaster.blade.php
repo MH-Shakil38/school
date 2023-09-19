@@ -34,6 +34,10 @@
         font-size: 16px !important;
         text-align: justify;
     }
+
+    .details img {
+        max-width: 100%;
+    }
 </style>
 <!DOCTYPE html>
 <html lang="en">
