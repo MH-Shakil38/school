@@ -26,10 +26,6 @@
 {{--                </div>--}}
 
                 @include('website.include.gallery-event')
-
-
-
-
             </div>
 
            @include('website.include.home-right-div')
