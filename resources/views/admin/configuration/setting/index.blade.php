@@ -43,6 +43,16 @@
         </tr>
 
         <tr>
+            <th>Phone</th>
+            <td>{{$setting->facebook ?? ''}}</td>
+        </tr>
+
+        <tr>
+            <th>Phone</th>
+            <td>{{$setting->youtube ?? ''}}</td>
+        </tr>
+
+        <tr>
             <th>Institute Code</th>
             <td>{{$setting->code ?? ''}}</td>
         </tr>

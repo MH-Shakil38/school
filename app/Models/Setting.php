@@ -18,6 +18,8 @@ class Setting extends Model
         'code',
         'logo',
         'map',
+        'facebook',
+        'youtube',
         'full_address',
         'details',
         'establish'
