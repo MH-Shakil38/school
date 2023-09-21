@@ -55,7 +55,7 @@
         <div class="row mt-3">
             <div class="col-md-12">
                 <div class="footer-bottom">
-                    <p><small>&copy; Copyright 2018, <a href="https://www.facebook.com/maynuddin.shakil" target="_blank">Maynuddin Hasan Shakil</a></small> </p>
+                    <p><small>&copy; Copyright 2023, <a href="https://www.facebook.com/maynuddin.shakil" target="_blank">Maynuddin Hasan Shakil</a></small> </p>
                 </div>
             </div>
         </div>
