@@ -39,7 +39,7 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="">Name</label>
-                                                <input type="text" name="title" id="" class="form-control">
+                                                <input type="text" name="title" id="" class="form-control" value="{{$message->title ?? old('title')}}">
                                             </div>
                                         </div>
 
