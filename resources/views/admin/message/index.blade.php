@@ -96,7 +96,11 @@
                                         <span class="badge bg-warning"> Updating...</span>
                                     @else
                                         <a href="{{route('messages.edit',$info->id)}}" class="btn btn-info"> <i class="fa fa-edit"></i> </a>
-                                        <a href="{{route('messages.edit',$info->id)}}" class="btn btn-danger"> <i class="fa fa-trash"></i> </a>
+                                        <form action="{{ route('messages.destroy', $info->id) }}" type="submit" method='post' >
+                                            @csrf
+                                            @method('delete')
+                                            <button  type="submit" class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> </button>
+                                        </form>
                                     @endif
                                 </td>
                             </tr>

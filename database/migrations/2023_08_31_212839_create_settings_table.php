@@ -24,6 +24,8 @@ return new class extends Migration
             $table->string('full_address')->nullable();
             $table->longText('details')->nullable();
             $table->date('establish')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('youtube')->nullable();
             $table->timestamps();
         });
     }

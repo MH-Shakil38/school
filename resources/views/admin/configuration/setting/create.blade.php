@@ -83,6 +83,20 @@
                         </div>
                     </div>
 
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="name">Facebook</label>
+                            <input type="text" name="facebook" class="form-control" value="{{$setting->facebook ?? old('facebook')}}">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="name">Youtube</label>
+                            <input type="text" name="youtube" class="form-control" value="{{$setting->youtube ?? old('youtube')}}">
+                        </div>
+                    </div>
+
                     <div class="col-md-8">
                         <div class="form-group">
                             <label for="name">Full Address</label>
