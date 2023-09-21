@@ -4,6 +4,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
+                    <a href="{{route('message-category.index')}}" style="float: right" class="btn btn-success">Category</a>
                     <h5>Add Message</h5>
                 </div>
                 <div class="card-body">
@@ -114,4 +115,53 @@
         </div>
     </div>
 
+
+{{--    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rightModal">--}}
+{{--        Open Right-Side Modal--}}
+{{--    </button>--}}
+
+
+{{--    <div class="modal fade" id="rightModal" tabindex="-1" role="dialog" aria-labelledby="rightModalLabel" aria-hidden="true">--}}
+{{--        <div class="modal-dialog modal-dialog-right" role="document">--}}
+{{--            <div class="modal-content">--}}
+{{--                <!-- Modal content goes here -->--}}
+{{--                <div class="modal-header">--}}
+{{--                    <h5 class="modal-title" id="rightModalLabel">Right-Side Modal</h5>--}}
+{{--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">--}}
+{{--                        <span aria-hidden="true">&times;</span>--}}
+{{--                    </button>--}}
+{{--                </div>--}}
+{{--                <div class="modal-body">--}}
+{{--                    <!-- Your modal content here -->--}}
+{{--                    <p>This is a modal that opens from the right side of the screen.</p>--}}
+{{--                </div>--}}
+{{--                <div class="modal-footer">--}}
+{{--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
+{{--                    <button type="button" class="btn btn-primary">Save changes</button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--    <style>--}}
+{{--        .modal-dialog-right {--}}
+{{--            transform: translateX(200%);--}}
+{{--            animation: slideInRight 2s forwards;--}}
+{{--        }--}}
+
+{{--        @keyframes slideInRight {--}}
+{{--            to {--}}
+{{--                transform: translateX(0);--}}
+{{--            }--}}
+{{--        }--}}
+{{--        .modal-content{--}}
+{{--            height: 100% !important;--}}
+{{--        }--}}
+{{--        .modal.show .modal-dialog {--}}
+{{--            -webkit-transform: none;--}}
+{{--            transform: none;--}}
+{{--            height: 90%;--}}
+{{--            float: right;--}}
+{{--        }--}}
+
+{{--    </style>--}}
 @endsection

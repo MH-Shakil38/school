@@ -70,29 +70,12 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-copy"></i>
-                                <p>
-                                    আমাদের কথা
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
+                            <a href="{{route('messages.index')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>আমাদের কথা</p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="{{route('messages.index')}}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>New</p>
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{{route('message-category.index')}}" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Category</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
+
                         <li class="nav-item">
                             <a href="{{route('marquees.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
