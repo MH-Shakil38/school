@@ -86,7 +86,11 @@
                                         <span class="badge bg-warning"> Updating...</span>
                                     @else
                                         <a href="{{route('slider.edit',$info->id)}}" class="btn btn-info"> <i class="fa fa-edit"></i> </a>
-                                        <a href="{{route('slider.edit',$info->id)}}" class="btn btn-danger"> <i class="fa fa-trash"></i> </a>
+                                        <form action="{{ route('slider.destroy', $info->id) }}" type="submit" method='post' >
+                                            @csrf
+                                            @method('delete')
+                                            <button  type="submit" class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> </button>
+                                        </form>
                                     @endif
                                 </td>
                             </tr>
