@@ -7,4 +7,4 @@
 <link rel="stylesheet" href="{{asset('theam1/')}}/css/venobox.css">
 <link href="{{asset('theam1/')}}/css/style.css" rel="stylesheet" />
 <!--  Favicon  -->
-<link rel="shortcut icon" href="{{asset('theam1/')}}/media/logos/kU2WQetLkfShQkfVgobMazJMklmTL6Wd1tsGAJHB.jpg" />
+<link rel="shortcut icon" href="{{setting()->logo}}" />
