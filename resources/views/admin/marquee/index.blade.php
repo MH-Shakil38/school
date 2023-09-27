@@ -112,7 +112,7 @@
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$info->status == 1 ? 'on' : 'off'}}</td>
-                                <td>{{$info->title ?? $info->notice->title}}</td>
+                                <td>{{@$info->title ?? @$info->notice->title ?? ''}}</td>
                                 <td class="text-center">
                                     @if(isset($info->notice->details))
                                         <a class="btn btn-primary" href=""><i class="fa fa-file-word"></i></a>
