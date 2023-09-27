@@ -5,7 +5,7 @@
                 $history = sub_menus_first(6);
             @endphp
             <div class="home-achivement-heading">
-                <h3 style="background: #008000"> প্রতিষ্ঠানের ইতিহাস</h3>
+                <h3 style="background: #008000"> মাদরাসার ইতিহাস</h3>
             </div>
             <div class="row">
                 <a href="{{route('message.details',6)}}">
