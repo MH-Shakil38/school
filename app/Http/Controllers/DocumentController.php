@@ -47,9 +47,9 @@ class DocumentController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'file' => 'required|mimes:pdf'
-        ]);
+//        $request->validate([
+//            'file' => 'required|mimes:pdf'
+//        ]);
         $request->validate([
             'category_id'=>'required',
             'title'=>'required',
