@@ -6,28 +6,30 @@
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                 <div class="inner-pager-box">
                     <div class="inner-page-content">
-                        @if($details->details !=null)
-                            <h4 style="padding: 15px;background: #4D4D4D;color: #FFFFFF;text-align: center">{{$details->title}}</h4>
-                            <hr>
-                        <div class="speech-box">
-                            <div class="seech-content">
-                                <div class="details">
-                                    {!! $details->details ?? '' !!}
-                                </div>
-                            </div>
-                        </div>
-                        @endif
+                        <h4 style="padding: 15px;background: #4D4D4D;color: #FFFFFF;text-align: center">{{$details->title}}</h4>
+
 
                             @if($details->file !=null)
                         <div class="speech-box">
                             <div class="">
-                                <p><br></p><p><span style="color: white; font-family: Ubuntu; background-color: rgb(255, 250, 250);"><a href="#" style="color: white" target="_blank"> <h4 style="padding: 15px;background: #4D4D4D;color: #FFFFFF;text-align: center">{{$details->title}}</h4></a></span><br></p>
+{{--                                <p><br></p><p><span style="color: white; font-family: Ubuntu; background-color: rgb(255, 250, 250);"><a href="#" style="color: white" target="_blank"> <h4 style="padding: 15px;background: #4D4D4D;color: #FFFFFF;text-align: center">{{$details->title}}</h4></a></span><br></p>--}}
                                 <object data="{{asset($details->file ?? $details->image)}}" type="application/pdf" width="100%" height="800px">
                                     <p>Alternative text - include a link <a href="{{$details->file ?? $details->image}}">to the PDF!</a></p>
                                 </object>
                             </div>
                         </div>
                             @endif
+                        @if($details->details !=null)
+
+                            <hr>
+                            <div class="speech-box">
+                                <div class="seech-content">
+                                    <div class="details">
+                                        {!! $details->details ?? '' !!}
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>

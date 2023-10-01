@@ -60,6 +60,25 @@
 
                     </ul>
                 </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Notice
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('website.post',21,['id'=>'12'])}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>New Notice</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
@@ -76,12 +95,12 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a href="{{route('marquees.index')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>সর্বশেষ নোটিশ</p>
-                            </a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="{{route('marquees.index')}}" class="nav-link">--}}
+{{--                                <i class="far fa-circle nav-icon"></i>--}}
+{{--                                <p>সর্বশেষ নোটিশ</p>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
                         @forelse(menus() as $info)
                             <li class="nav-item">
                                 <a href="{{route('website.post',$info->id)}}" class="nav-link">
@@ -176,25 +195,6 @@
                             </a>
                         </li>
 
-                    </ul>
-                </li>
-
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Notice
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('website.post',21,['id'=>'12'])}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>New Notice</p>
-                            </a>
-                        </li>
                     </ul>
                 </li>
 

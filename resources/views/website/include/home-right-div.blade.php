@@ -116,7 +116,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <ul class="demo2" style="overflow-y: hidden; height: 200px;">
-                            @forelse(noticeBoard() as $info)
+                            @forelse(noticeBoard(15) as $info)
                                 <li style="" class="news-item mt-1">
                                 <div class="notice-box-content-home">
                                     <div class="notice-box-content-date">
@@ -133,132 +133,7 @@
                             </li>
                             @empty
                             @endforelse
-{{--                            <li style="" class="news-item mt-1">--}}
-{{--                                <div class="notice-box-content-home">--}}
-{{--                                    <div class="notice-box-content-date">--}}
-{{--                                        <p class="notice-date">11</p>--}}
-{{--                                        <p class="notice-month">May</p>--}}
-{{--                                    </div>--}}
 
-{{--                                    <div class="notice-box-content-all">--}}
-
-{{--                                        <p>Raised issues &amp; feedback as per Parents&#039; Meeting</p>--}}
-{{--                                        <a href="notice-board/raised-issues-feedback-as-per-parents-meeting.html" target="_blink">Read More</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-{{--                            <li style="" class="news-item mt-1">--}}
-{{--                                <div class="notice-box-content-home">--}}
-{{--                                    <div class="notice-box-content-date">--}}
-{{--                                        <p class="notice-date">30</p>--}}
-{{--                                        <p class="notice-month">Mar</p>--}}
-{{--                                    </div>--}}
-
-{{--                                    <div class="notice-box-content-all">--}}
-
-{{--                                        <p>Student Scholarship form and Notice 2023</p>--}}
-{{--                                        <a href="notice-board/student-scholarship-form-and-notice-2023.html" target="_blink">Read More</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-{{--                            <li style="" class="news-item mt-1">--}}
-{{--                                <div class="notice-box-content-home">--}}
-{{--                                    <div class="notice-box-content-date">--}}
-{{--                                        <p class="notice-date">29</p>--}}
-{{--                                        <p class="notice-month">Mar</p>--}}
-{{--                                    </div>--}}
-
-{{--                                    <div class="notice-box-content-all">--}}
-
-{{--                                        <p>দরিদ্র তহবিল গঠন সংক্রান্ত বিজ্ঞপ্তি</p>--}}
-{{--                                        <a href="notice-board/dridr-thbil-gthn-sngkrant-bijngpti.html" target="_blink">Read More</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-{{--                            <li style="" class="news-item mt-1">--}}
-{{--                                <div class="notice-box-content-home">--}}
-{{--                                    <div class="notice-box-content-date">--}}
-{{--                                        <p class="notice-date">16</p>--}}
-{{--                                        <p class="notice-month">Mar</p>--}}
-{{--                                    </div>--}}
-
-{{--                                    <div class="notice-box-content-all">--}}
-
-{{--                                        <p>Pre Test Examination-2023_Science-G</p>--}}
-{{--                                        <a href="notice-board/pre-test-examination-2023-science-g.html" target="_blink">Read More</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-{{--                            <li style="" class="news-item mt-1">--}}
-{{--                                <div class="notice-box-content-home">--}}
-{{--                                    <div class="notice-box-content-date">--}}
-{{--                                        <p class="notice-date">16</p>--}}
-{{--                                        <p class="notice-month">Mar</p>--}}
-{{--                                    </div>--}}
-
-{{--                                    <div class="notice-box-content-all">--}}
-
-{{--                                        <p>Pre Test Examination-2023_Science-F</p>--}}
-{{--                                        <a href="notice-board/pre-test-examination-2023-science-f.html" target="_blink">Read More</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-{{--                            <li style="" class="news-item mt-1">--}}
-{{--                                <div class="notice-box-content-home">--}}
-{{--                                    <div class="notice-box-content-date">--}}
-{{--                                        <p class="notice-date">16</p>--}}
-{{--                                        <p class="notice-month">Mar</p>--}}
-{{--                                    </div>--}}
-
-{{--                                    <div class="notice-box-content-all">--}}
-
-{{--                                        <p>Pre Test Examination-2023_Science-E</p>--}}
-{{--                                        <a href="notice-board/pre-test-examination-2023-science-e.html" target="_blink">Read More</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-{{--                            <li style="" class="news-item mt-1">--}}
-{{--                                <div class="notice-box-content-home">--}}
-{{--                                    <div class="notice-box-content-date">--}}
-{{--                                        <p class="notice-date">16</p>--}}
-{{--                                        <p class="notice-month">Mar</p>--}}
-{{--                                    </div>--}}
-
-{{--                                    <div class="notice-box-content-all">--}}
-
-{{--                                        <p>Pre Test Examination-2023_Science-D</p>--}}
-{{--                                        <a href="notice-board/pre-test-examination-2023-science-d.html" target="_blink">Read More</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-{{--                            <li style="" class="news-item mt-1">--}}
-{{--                                <div class="notice-box-content-home">--}}
-{{--                                    <div class="notice-box-content-date">--}}
-{{--                                        <p class="notice-date">16</p>--}}
-{{--                                        <p class="notice-month">Mar</p>--}}
-{{--                                    </div>--}}
-
-{{--                                    <div class="notice-box-content-all">--}}
-
-{{--                                        <p>Pre Test Examination-2023_Science-C</p>--}}
-{{--                                        <a href="notice-board/pre-test-examination-2023-science-c.html" target="_blink">Read More</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-{{--                            <li style="" class="news-item mt-1">--}}
-{{--                                <div class="notice-box-content-home">--}}
-{{--                                    <div class="notice-box-content-date">--}}
-{{--                                        <p class="notice-date">16</p>--}}
-{{--                                        <p class="notice-month">Mar</p>--}}
-{{--                                    </div>--}}
-
-{{--                                    <div class="notice-box-content-all">--}}
-
-{{--                                        <p>Pre Test Examination-2023_Science-B</p>--}}
-{{--                                        <a href="notice-board/pre-test-examination-2023-science-b.html" target="_blink">Read More</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
                         </ul>
                     </div>
                 </div>
@@ -266,51 +141,14 @@
             <a href="{{route('all.notice')}}" class="pull-right" style="color: #01016d;">View All</a>
         </div>
     </div>
-
     <div class="home-chairman mt-1">
         <h3>ফেইসবুক পেজ</h3>
         <div class="footer-social">
             <div class="embed-responsive embed-responsive-16by9" style="width: 109%">
-
                 <a class="w-100" href="{{setting()->facebook ?? '#'}}" target="_blank"><img class="w-100" style="background: no-repeat;height: 215px" src="{{setting()->logo ?? ''}}" alt=""></a>
-{{--                <iframe class="embed-responsive-item"  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FChattogram-Cantonment-Public-College-CCPC-365141890721716%2F&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" style="border: none; overflow: hidden" scrolling="no" allowtransparency="true" width="100%" height="250" frameborder="0"></iframe>--}}
             </div>
         </div>
     </div>
-{{--        <div class="home-chairman chairman-box mt-1">--}}
-{{--            <h3>Developed By</h3>--}}
-{{--            <a href="https://www.facebook.com/maynuddin.shakil" class="speach">--}}
-{{--                <div class="">--}}
-{{--                    <div class="inner-pager-box" style="height: 240px">--}}
-{{--                        <div class="inner-page-content">--}}
-{{--                            <div class="speech-box">--}}
-{{--                                <div class="speech-img text-center" style="color: black;">--}}
-{{--                                    <img  height="120" style="width: 130px !important;" src="{{asset('/maynuddin.jpg')}}"--}}
-{{--                                          class="d-block w-100 m-auto " alt="">--}}
-{{--                                    <div class="" style="background: #6e7a6c5e">--}}
-{{--                                        <h4 style="margin-bottom: 0px">Engr. Maynuddin Hasan</h4>--}}
-{{--                                        <span class="border-bottom">Software Engineer</span><br>--}}
-{{--                                        <span>At Asian Television Ltd.</span>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="seech-content" style="margin-top: 10px">--}}
-{{--                                    <div class="details" style="color:black;max-height: 112px;overflow: hidden;text-align: justify;line-height: 28px;display: -webkit-box;-webkit-line-clamp: 4; -webkit-box-orient: vertical;">--}}
-
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    --}}{{--                <div class="spech-img">--}}
-{{--                    --}}{{--                    <img src="{{asset($info->message->image ?? '')}}" alt="">--}}
-{{--                    --}}{{--                </div>--}}
-{{--                    --}}{{--                <div class="spech-cont">--}}
-{{--                    --}}{{--                    <h4>{{$info->message->title ?? ''}}</h4>--}}
-{{--                    --}}{{--                    <span>Chief Patron</span>--}}
-{{--                    --}}{{--                </div>--}}
-{{--                </div>--}}
-{{--            </a>--}}
-{{--        </div>--}}
     <div class="home-chairman mt-1">
         <h3>ভিজিটর কাউন্টার</h3>
         <div class="count-table">
