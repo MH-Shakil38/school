@@ -1,4 +1,11 @@
 @extends('website.layouts.schoolMaster')
+@section('meta')
+    <meta property="og:url" content="{{route('notice.details',$details->id)}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{$details->title}}" />
+    <meta property="og:description" content="{{$details->details ?? ''}}" />
+    <meta property="og:image" content="{{asset($details->file ?? setting()->logo)}}" />
+@endsection
 @section('content')
 <section class="inner-page">
     <div class="container">
@@ -6,7 +13,7 @@
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                 <div class="inner-pager-box">
                     <div class="inner-page-content">
-                        <h4 style="padding: 15px;background: #4D4D4D;color: #FFFFFF;text-align: center">{{$details->title}}</h4>
+                        <h4 style="padding: 15px;background: #4D4D4D;color: #FFFFFF;text-align: center">{{$details->title}} <a href="https://facebook.com/sharer.php?u={{route('notice.details',$details->id)}}" class="btn btn-primary" style="float: right;margin-top: -4px"> <i class="fa fa-facebook-f"></i> </a></h4>
 
 
                             @if($details->file !=null)

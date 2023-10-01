@@ -51,6 +51,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    @yield('meta')
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>{{setting()->bn_name}}</title>
 
@@ -70,7 +71,18 @@
 
 
 @include('website.include.footer-details')
+<script>
+    function shareOnFacebook() {
+        // Define the URL you want to share
+        var urlToShare = 'https://example.com/your-post-url';
 
+        // Open the Facebook Share Dialog
+        FB.ui({
+            method: 'share',
+            href: urlToShare,
+        }, function(response){});
+    }
+</script>
 @yield('js')
 @include('website.include.footer-script')
 @include('website.include.master-file-script')
