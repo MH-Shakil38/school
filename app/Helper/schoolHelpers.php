@@ -94,12 +94,12 @@ if (!function_exists('managements')){
 }
 if (!function_exists('marquee')){
     function marquee(){
-        return \App\Models\marquee::query()->with(['notice'])->where('status',1)->orderBy('created_at','ASC')->latest()->get();
+        return \App\Models\Document::query()->where('status',1)->orderBy('created_at','ASC')->latest()->limit(5)->get();
     }
 }
 if (!function_exists('noticeBoard')){
-    function noticeBoard(){
-        return \App\Models\Document::query()->with(['category'])->where('status',1)->orderBy('created_at','ASC')->latest()->limit(15)->get();
+    function noticeBoard($limit = 15){
+        return \App\Models\Document::query()->with(['category'])->where('status',1)->orderBy('created_at','ASC')->latest()->limit($limit)->get();
     }
 }
 
