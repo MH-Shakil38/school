@@ -27,12 +27,13 @@
             <div class="col-md-4">
                 <div class="footer-box">
                     <div class="footer-title">
-                        <h4>মানচিত্র</h4>
+                        <h4>মানচিত্র  <a href="https://facebook.com/sharer.php?u={{url('/')}}" class="btn btn-primary" style="float: right;margin-top: -7px"> <i class="fa fa-facebook-f"></i> </a></h4>
                     </div>
                     <div class="map">
 {{--                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7393.56266876395!2d92.04627349204154!3d22.09616631933561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad116deaaaaaab%3A0x1f1da62d0457fcdf!2sIchamoti%20Yakub%20Morium%20High%20School!5e0!3m2!1sbn!2sbd!4v1693637562014!5m2!1sbn!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>--}}
                         <iframe src="{{setting()->map ?? ''}}" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                     </div>
+
                 </div>
             </div>
 

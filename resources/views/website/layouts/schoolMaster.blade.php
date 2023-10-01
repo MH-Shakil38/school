@@ -51,6 +51,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url" content="{{url('/')}}" />
+    <meta property="og:type" content="Madrasha/School website" />
+    <meta property="og:title" content="{{setting()->bn_name}}" />
+    <meta property="og:description" content="{!! setting()->bn_name ?? '' !!}" />
+    <meta property="og:image" content="{{asset(setting()->logo)}}" />
     @yield('meta')
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>{{setting()->bn_name}}</title>
