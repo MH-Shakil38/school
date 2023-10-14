@@ -1,10 +1,10 @@
 @extends('website.layouts.schoolMaster')
 @section('meta')
-    <meta property="og:url" content="{{route('notice.details',$details->id)}}" />
-    <meta property="og:type" content="notice" />
-    <meta property="og:title" content="{{$details->title}}" />
-    <meta property="og:description" content="{!! $details->details ?? '' !!}" />
-    <meta property="og:image" content="{{asset(setting()->logo)}}" />
+{{--    <meta property="og:url" content="{{route('notice.details',$details->id)}}" />--}}
+{{--    <meta property="og:type" content="notice" />--}}
+{{--    <meta property="og:title" content="{{$details->title}}" />--}}
+{{--    <meta property="og:description" content="{!! $details->details ?? '' !!}" />--}}
+{{--    <meta property="og:image" content="{{asset(setting()->logo)}}" />--}}
 @endsection
 @section('content')
 <section class="inner-page">
