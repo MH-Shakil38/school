@@ -140,11 +140,16 @@
                             @if(isset($banner) && $banner->id == $info->id)
                             <span class="badge bg-warning"> Updating...</span>
                             @else
-                            <a href="{{route('banners.edit',$info->id)}}" class="btn btn-info"> <i
+                            <a href="{{route('banners.edit',$info->id)}}" class="btn btn-info float-left"> <i
                                     class="fa fa-edit"></i> </a>
-                            <a href="{{route('banners.edit',$info->id)}}" class="btn btn-danger">
-                                <i
-                                    class="fa fa-trash"></i> </a>
+                                <form id="delete-form-{{$info->id}}"
+                                      action="{{route('banners.destroy', $info->id)}}"
+                                      method="post">
+                                    @csrf @method('DELETE')
+                                    <button type="submit" class="btn btn-danger float-right">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </form>
                             @endif
                         </td>
                     </tr>

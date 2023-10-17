@@ -164,7 +164,7 @@
                             @else
                             <a href="{{route('managements.edit',$info->id)}}" class="btn btn-info"> <i
                                     class="fa fa-edit"></i> </a>
-                            <a href="{{route('managements.edit',$info->id)}}" class="btn btn-danger">
+                            <a href="#" class="btn btn-danger">
                                 <i
                                     class="fa fa-trash"></i> </a>
                             @endif

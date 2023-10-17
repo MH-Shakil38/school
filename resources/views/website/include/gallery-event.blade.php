@@ -41,7 +41,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 achievements">
         <div class="page-content">
             <div class="home-achivement-heading">
-                <h3 style="background: #008000">পরিচালনা পরিষদ <a href="{{route('management.list')}}" class="float-left" style="float: right;color: white;margin-right: 8px">আরো দেখুন...</a> </h3>
+                <h3 style="background: #008000">পরিচালনা পরিষদ <a href="{{route('teacher.list')}}" class="float-left" style="float: right;color: white;margin-right: 8px">আরো দেখুন...</a> </h3>
             </div>
         </div>
         <div class="row">
@@ -51,18 +51,19 @@
                         @forelse(managements() as $info)
                             <div class="photo-slide singCourse_imgarea">
                                 <a  href="{{route('management.details',$info->id)}}">
-                                    <img  style="height: 174px; border: 7px solid #008000" src="{{asset($info->image)}}" class="-mg-fulid w-100" alt="" loading="lazy">
+                                    <img  style="border: 2px solid #008000" src="{{asset($info->image)}}" class="-mg-fulid w-100 user-image" alt="" loading="lazy">
+                                    <div class="user-heading bg-danger text-center" style="background: #2d483a;padding: 2px;font-weight: bold;min-height: 65px" >
+                                        <span href="" style="color: #FFFFFF"><i style="margin-right: 5px" class="fa fa-user mr-1"></i>{{$info->name}}</span>
+                                        <br>
+                                        <span href="" style="color: #cfce18"><i style="margin-right: 5px" class="fa fa-book mr-1"></i>{{$info->designation->name ?? '----'}}</span>
+                                    </div>
                                 </a>
-                                <div class="bg-danger text-center" style="background: #2d483a;padding: 2px;font-weight: bold" >
-                                    <span href="" style="color: #FFFFFF"><i style="margin-right: 5px" class="fa fa-user mr-1"></i>{{$info->name}}</span>
-                                    <br>
-                                    <span href="" style="color: #cfce18"><i style="margin-right: 5px" class="fa fa-book mr-1"></i>{{$info->designation->name ?? '----'}}</span>
-                                </div>
-                                <div class="bg-danger text-center" style="padding: 5px;background: #008000" >
-                                    <a href="{{$info->facebook}}" class="btn btn-primary p-2"><i class="fa fa-facebook"></i></a>
-                                    <a href="{{route('management.details',$info->id)}}" class="btn btn-success p-2"><i class="fa fa-eye"></i></a>
-                                    <a href="" class="btn btn-danger p-2"><i class="fa fa-youtube-play"></i></a>
-                                </div>
+
+{{--                                <div class="bg-danger text-center" style="padding: 5px;background: #008000" >--}}
+{{--                                    <a href="{{$info->facebook}}" class="btn btn-primary p-2"><i class="fa fa-facebook"></i></a>--}}
+{{--                                    <a href="{{route('management.details',$info->id)}}" class="btn btn-success p-2"><i class="fa fa-eye"></i></a>--}}
+{{--                                    <a href="" class="btn btn-danger p-2"><i class="fa fa-youtube-play"></i></a>--}}
+{{--                                </div>--}}
                             </div>
                         @empty
                         @endforelse
@@ -78,7 +79,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 achievements">
         <div class="page-content">
             <div class="home-achivement-heading">
-                <h3 style="background: #008000">শিক্ষক <a href="{{route('teacher.list')}}" class="float-left" style="float: right;color: white;margin-right: 8px">আরো দেখুন...</a> </h3>
+                <h3 style="background: #008000">শিক্ষক <a href="{{route('management.list')}}" class="float-left" style="float: right;color: white;margin-right: 8px">আরো দেখুন...</a> </h3>
             </div>
         </div>
         <div class="row">
@@ -86,21 +87,22 @@
                 <div class="page-content teacher-slider">
                     <div class="mx-0 teacherGallery">
                         @forelse(teachers() as $info)
-                            <div class="photo-slide singCourse_imgarea">
-                                <a  href="{{route('teacher.details',[$info->id,str_replace($info->name,' ','-')])}}">
-                                    <img  style="height: 174px; border: 7px solid #008000" src="{{asset($info->image)}}" class="-mg-fulid w-100" alt="" loading="lazy">
-                                </a>
-                                <div class="bg-danger text-center" style="background: #2d483a;padding: 2px;font-weight: bold" >
-                                    <span href="" style="color: #FFFFFF"><i style="margin-right: 5px" class="fa fa-user mr-1"></i>{{$info->name}}</span>
-                                    <br>
-                                    <span href="" style="color: #cfce18"><i style="margin-right: 5px" class="fa fa-book mr-1"></i>{{$info->designation->name ?? '----'}}</span>
+                                <div class="photo-slide singCourse_imgarea">
+                                    <a  href=" {{route('teacher.details',[$info->id,str_replace($info->name,' ','-')])}}">
+                                        <img  style="border: 2px solid #008000" src="{{asset($info->image)}}" class="-mg-fulid w-100 user-image" alt="" loading="lazy">
+                                        <div class="user-heading bg-danger text-center" style="background: #2d483a;padding: 2px;font-weight: bold;min-height: 65px" >
+                                            <span href="" style="color: #FFFFFF"><i style="margin-right: 5px" class="fa fa-user mr-1"></i>{{$info->name}}</span>
+                                            <br>
+                                            <span href="" style="color: #cfce18"><i style="margin-right: 5px" class="fa fa-book mr-1"></i>{{$info->designation->name ?? '----'}}</span>
+                                        </div>
+                                    </a>
+
+                                    {{--                                <div class="bg-danger text-center" style="padding: 5px;background: #008000" >--}}
+                                    {{--                                    <a href="{{$info->facebook}}" class="btn btn-primary p-2"><i class="fa fa-facebook"></i></a>--}}
+                                    {{--                                    <a href="{{route('management.details',$info->id)}}" class="btn btn-success p-2"><i class="fa fa-eye"></i></a>--}}
+                                    {{--                                    <a href="" class="btn btn-danger p-2"><i class="fa fa-youtube-play"></i></a>--}}
+                                    {{--                                </div>--}}
                                 </div>
-                                <div class="bg-danger text-center" style="padding: 5px;background: #008000" >
-                                    <a href="{{$info->facebook}}" class="btn btn-primary p-2"><i class="fa fa-facebook"></i></a>
-                                    <a href="{{route('teacher.details',[$info->id,str_replace($info->name,' ','-')])}}" class="btn btn-success p-2"><i class="fa fa-eye"></i></a>
-                                    <a href="" class="btn btn-danger p-2"><i class="fa fa-youtube-play"></i></a>
-                                </div>
-                            </div>
                         @empty
                         @endforelse
                     </div>
@@ -111,33 +113,71 @@
 
 </div>
 
-
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 achievements">
         <div class="page-content">
             <div class="home-achivement-heading">
-                <h3 style="background: #008000">শিক্ষার্থী <a href="" class="float-left" style="float: right;color: white;margin-right: 8px">আরো দেখুন...</a> </h3>
+                <h3 style="background: #008000">শিক্ষার্থী <a href="{{route('teacher.list')}}" class="float-left" style="float: right;color: white;margin-right: 8px">আরো দেখুন...</a> </h3>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-content teacher-slider">
+                    <div class="mx-0 teacherGallery">
+                        @forelse(teachers() as $info)
+                                <div class="photo-slide singCourse_imgarea">
+                                    <a  href=" {{route('teacher.details',[$info->id,str_replace($info->name,' ','-')])}}">
+                                        <img  style="border: 2px solid #008000" src="{{asset($info->image)}}" class="-mg-fulid w-100 user-image" alt="" loading="lazy">
+                                        <div class="user-heading bg-danger text-center" style="background: #2d483a;padding: 2px;font-weight: bold;min-height: 65px" >
+                                            <span href="" style="color: #FFFFFF"><i style="margin-right: 5px" class="fa fa-user mr-1"></i>{{$info->name}}</span>
+                                            <br>
+                                            <span href="" style="color: #cfce18"><i style="margin-right: 5px" class="fa fa-book mr-1"></i>{{$info->designation->name ?? '----'}}</span>
+                                        </div>
+                                    </a>
+
+                                    {{--                                <div class="bg-danger text-center" style="padding: 5px;background: #008000" >--}}
+                                    {{--                                    <a href="{{$info->facebook}}" class="btn btn-primary p-2"><i class="fa fa-facebook"></i></a>--}}
+                                    {{--                                    <a href="{{route('management.details',$info->id)}}" class="btn btn-success p-2"><i class="fa fa-eye"></i></a>--}}
+                                    {{--                                    <a href="" class="btn btn-danger p-2"><i class="fa fa-youtube-play"></i></a>--}}
+                                    {{--                                </div>--}}
+                                </div>
+                        @empty
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{{--<div class="row">--}}
+{{--    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 achievements">--}}
+{{--        <div class="page-content">--}}
+{{--            <div class="home-achivement-heading">--}}
+{{--                <h3 style="background: #008000">শিক্ষক <a href="{{route('teacher.list')}}" class="float-left" style="float: right;color: white;margin-right: 8px">আরো দেখুন...</a> </h3>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 {{--        <div class="row">--}}
 {{--            <div class="col-md-12">--}}
 {{--                <div class="page-content teacher-slider">--}}
 {{--                    <div class="mx-0 teacherGallery">--}}
 {{--                        @forelse(teachers() as $info)--}}
 {{--                            <div class="photo-slide singCourse_imgarea">--}}
-{{--                                <a  href="{{route('teacher.details',[$info->id,str_replace($info->name,' ','-')])}}">--}}
-{{--                                    <img  style="height: 174px; border: 7px solid #30654c" src="{{asset($info->image)}}" class="-mg-fulid w-100" alt="">--}}
+{{--                                <a  href=" {{route('teacher.details',[$info->id,str_replace($info->name,' ','-')])}}">--}}
+{{--                                    <img  style="border: 2px solid #008000" src="{{asset($info->image)}}" class="-mg-fulid w-100 user-image" alt="" loading="lazy">--}}
+{{--                                    <div class="user-heading bg-danger text-center" style="background: #2d483a;padding: 2px;font-weight: bold;min-height: 65px" >--}}
+{{--                                        <span href="" style="color: #FFFFFF"><i style="margin-right: 5px" class="fa fa-user mr-1"></i>{{$info->name}}</span>--}}
+{{--                                        <br>--}}
+{{--                                        <span href="" style="color: #cfce18"><i style="margin-right: 5px" class="fa fa-book mr-1"></i>{{$info->designation->name ?? '----'}}</span>--}}
+{{--                                    </div>--}}
 {{--                                </a>--}}
-{{--                                <div class="bg-danger text-center" style="background: #2d483a;padding: 2px;font-weight: bold" >--}}
-{{--                                    <span href="" style="color: #FFFFFF"><i style="margin-right: 5px" class="fa fa-user mr-1"></i>{{$info->name}}</span>--}}
-{{--                                    <br>--}}
-{{--                                    <span href="" style="color: #cfce18"><i style="margin-right: 5px" class="fa fa-book mr-1"></i>{{$info->designation->name ?? '----'}}</span>--}}
-{{--                                </div>--}}
-{{--                                <div class="bg-danger text-center" style="padding: 5px;background: #30654c" >--}}
-{{--                                    <a href="{{$info->facebook}}" class="btn btn-primary p-2"><i class="fa fa-facebook"></i></a>--}}
-{{--                                    <a href="{{route('teacher.details',[$info->id,str_replace($info->name,' ','-')])}}" class="btn btn-success p-2"><i class="fa fa-eye"></i></a>--}}
-{{--                                    <a href="" class="btn btn-danger p-2"><i class="fa fa-youtube-play"></i></a>--}}
-{{--                                </div>--}}
+
+{{--                                --}}{{--                                <div class="bg-danger text-center" style="padding: 5px;background: #008000" >--}}
+{{--                                --}}{{--                                    <a href="{{$info->facebook}}" class="btn btn-primary p-2"><i class="fa fa-facebook"></i></a>--}}
+{{--                                --}}{{--                                    <a href="{{route('management.details',$info->id)}}" class="btn btn-success p-2"><i class="fa fa-eye"></i></a>--}}
+{{--                                --}}{{--                                    <a href="" class="btn btn-danger p-2"><i class="fa fa-youtube-play"></i></a>--}}
+{{--                                --}}{{--                                </div>--}}
 {{--                            </div>--}}
 {{--                        @empty--}}
 {{--                        @endforelse--}}
@@ -145,9 +185,21 @@
 {{--                </div>--}}
 {{--            </div>--}}
 {{--        </div>--}}
-    </div>
+{{--    </div>--}}
 
-</div>
+{{--</div>--}}
+
+
+{{--<div class="row">--}}
+{{--    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 achievements">--}}
+{{--        <div class="page-content">--}}
+{{--            <div class="home-achivement-heading">--}}
+{{--                <h3 style="background: #008000">শিক্ষার্থী <a href="" class="float-left" style="float: right;color: white;margin-right: 8px">আরো দেখুন...</a> </h3>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+
+{{--</div>--}}
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 achievements">

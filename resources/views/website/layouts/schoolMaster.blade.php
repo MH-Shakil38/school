@@ -94,5 +94,109 @@
 @yield('script')
 </body>
 
+
+<style>
+
+    @media screen and (min-width: 0px) and (max-width: 600px){
+        nav.navbar.navbar-default{
+            float: left;
+        }
+        .slick-track {
+            height: 9px !important;
+        }
+
+        .user-image{
+            height: 130px !important;
+            border: 2px solid #008000;
+        }
+             .teacher-slider .slick-track{
+                 height: 260px !important;
+             }
+        .user-heading.bg-danger.text-center {
+            position: absolute;
+            width: 7.2%;
+            font-size: 10px;
+            bottom: -5px;
+            min-height: 42px !important;
+        }
+        .teacher-slider .slick-track {
+            height: 260px;
+        }
+        .teacher-slider .slick-track {
+            height: unset;
+        }
+        img.-mg-fulid.w-100.user-image {
+            height: 166px;
+        }
+        .page-content.teacher-slider {
+            height: 180px !important;
+        }
+
+        .teacher-slider .slick-track {
+            height: 0px !important;
+        }
+        .slick-track {
+            height: 9px !important;
+        }
+        .user-image{
+            height: 174px;
+            border: 2px solid #008000;
+        }
+        .teacher-slider .slick-track{
+            height: unset !important;
+        }
+        .user-heading.bg-danger.text-center {
+            position: absolute;
+            width: 31.2%;
+            font-size: 10px;
+            bottom: 4px;
+            min-height: 140px;
+        }
+        .user-image{
+            height: 174px !important;
+            border: 2px solid #008000;
+        }
+        .teacher-slider .slick-track {
+            height: 260px;
+        }
+        .teacher-slider .slick-track {
+            height: unset;
+        }
+        img.-mg-fulid.w-100.user-image {
+            height: 166px;
+        }
+        .page-content.teacher-slider {
+            height: 180px !important;
+        }
+    }
+    .user-heading.bg-danger.text-center {
+        position: absolute;
+        width: 7.4%;
+        font-size: 10px;
+        bottom: -5px;
+        min-height: 42px !important;
+    }
+    .user-image{
+        height: 174px !important;
+        border: 2px solid #008000;
+    }
+    /*# Tablet*/
+
+
+    /*# Desktop*/
+    @media  only screen and (min-width: 788px){
+        .teacher-slider .slick-track {
+            height: 221px;
+        }
+    }
+
+   /* # Huge*/
+    @media  only screen and (min-width: 1280px){
+
+    }
+
+
+
+</style>
 <!-- Mirrored from ccpc.edu.bd/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 31 Aug 2023 11:43:46 GMT -->
 </html>

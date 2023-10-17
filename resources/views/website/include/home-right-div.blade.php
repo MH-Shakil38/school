@@ -46,7 +46,7 @@
                             </div>
                             <div class="seech-content" style="margin-top: 10px">
                                 <div class="details" style="color:black;max-height: 112px;overflow: hidden;text-align: justify;line-height: 28px;display: -webkit-box;-webkit-line-clamp: 4; -webkit-box-orient: vertical;">
-                                    {!! strip_tags($info->message->details) !!}
+                                    {!! strip_tags(@$info->message->details) !!}
 {{--                                    {!! $info->message->details ?? '' !!}--}}
                                 </div>
                             </div>

@@ -29,6 +29,8 @@ Route::resource('message-category',\App\Http\Controllers\MessageCategoryControll
 Route::resource('circulars',\App\Http\Controllers\CircularController::class);
 Route::resource('marquees',\App\Http\Controllers\MarqueeController::class);
 Route::resource('documents',\App\Http\Controllers\DocumentController::class);
+Route::resource('admins',\App\Http\Controllers\AdminController::class);
+Route::resource('roles',\App\Http\Controllers\RoleController::class);
 
 //gallery
 Route::resource('photo-categories',\App\Http\Controllers\PhotoCategoryController::class);
