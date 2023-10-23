@@ -32,6 +32,7 @@ Route::resource('documents',\App\Http\Controllers\DocumentController::class);
 Route::resource('admins',\App\Http\Controllers\AdminController::class);
 Route::resource('roles',\App\Http\Controllers\RoleController::class);
 
+
 //gallery
 Route::resource('photo-categories',\App\Http\Controllers\PhotoCategoryController::class);
 Route::resource('photo-galleries',\App\Http\Controllers\PhotoGalleryController::class);
