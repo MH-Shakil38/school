@@ -88,9 +88,9 @@ class DocumentController extends Controller
      */
     public function update(Request $request, Document $document)
     {
-        $request->validate([
-            'file' => 'required|mimes:pdf'
-        ]);
+//        $request->validate([
+//            'file' => 'required|mimes:pdf'
+//        ]);
         $data = $request->all();
         if ($request->hasFile('image')){
             $data['image'] = self::imageUpload($request->image,ServiceFile::DOCUMENTS);
